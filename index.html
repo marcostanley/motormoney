@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <link rel="shortcut icon" type="image/png" href="/favicons.png"/>
 
-		<script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
-		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-		<script type="text/javascript" charset="utf-8">
+<head></head>
 
-		document.addEventListener("deviceready", onDeviceReady, false);
+	<body onload="onBodyLoad()">
 
-		function onDeviceReady() {
-			location.url = 'https://motormoney.org/';
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="cordova.js"></script>
+
+	<script type="text/javascript">
+		function onBodyLoad()
+		{
+		   document.addEventListener("deviceready", onDeviceReady, false);
+		   window.location.href = window.open("http://motormoney.org/", '_self ', 'location=yes');
 		}
 
-		</script>
-	</head>
-	<body>
-		
-	</body>
+		function onDeviceReady()
+		{
+		   // do your thing!
+		}
+	</script>
+</body>
 </html>
